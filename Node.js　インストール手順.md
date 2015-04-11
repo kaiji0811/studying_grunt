@@ -43,7 +43,7 @@ export NODE_PATH=$npm_dir
 $ source ~/.bash_profile
 ```
 
-これでnvmコマンドにパスが通りました。  
+これでnvmコマンドにパスが通りました。 
 
 ###2.Node.jsをインストール  
 先ほど入れたのはNode.jsのバージョン管理システムです。それでは本命の、Node.jsをインストールしてみましょう。  
@@ -78,6 +78,14 @@ Now using node v0.11.12
 ```  
 
 これでNode.jsのインストールは完了しました。  
+ですがこのままではターミナルを起動するたびに使用するバージョンを選択しなければいけません。  
+デフォルトで使用するNode.jsのバージョンを決めてしまいましょう。  
+
+```
+$ nvm alias default v0.11.12
+```  
+これでデフォルトでv0.11.12が起動するようになりました。  
+
 次は、Gruntを導入してみましょう。  
 
 [Gruntを使ってみよう！](https://github.com/kaiji0811/studying_grunt/wiki/Grunt%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81)
