@@ -4,11 +4,14 @@ watchで監視しているファイルに変更があった時に、自動的に
 Live Reloadを使ってみましょう。  
 ※google chromeを使用し説明します。
 
-###Live Reloadの使い方  
+手順
   1. ブラウザにアドオンをインストール
   1. watchのオプションでlivereloadをtrueにする
 
+###1.ブラウザにアドオンをインストール
+Live Reloadを使用するためには、ブラウザ側にアドオンを導入する必要があります。  
 
+[Live Reload - Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
 
 
