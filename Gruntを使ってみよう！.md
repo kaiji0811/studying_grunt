@@ -61,10 +61,13 @@ npm install grunt --save-dev
 基本的には``--save-dev``をつけてインストールするようにしましょう。  
   
 また、プラグインをインストールする際にも``npm install``を使用します。  
-では、grunt-contrib-connectというローカルサーバーを立てるためのプラグインをインストールしてみましょう。
+では、grunt-contrib-connectというローカルサーバーを立てるためのプラグインと、
+ファイルの変更などを監視するgrunt-contrib-watchをインストールしてみましょう。
+
+***プラグインをインストール***  
 
 ```
-$ npm install grunt-contrib-connect --save-dev
+$ npm install grunt-contrib-connect grunt-contrib-watch --save-dev
 ```  
 
 ###3.Gruntfile.jsを作成  
@@ -93,17 +96,31 @@ module.exports = function(grunt){
       server: {
           options: {
               port: 9000,
-              base: 'html'
+              base: ''
           }
+      }
+    },
+    watch: {
+      options: {
+          livereload: true
+      },
+      html: {
+          files: ['*.html'],
+          tasks: ['']
       }
     }
   });
  
   // loadNpmTasksを使用して、プラグインを読み込む
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
  
   //defaultと設定することで、登録しているタスクを実行する。
-  grunt.registerTask('default', ['connect']);  
+  grunt.registerTask('default', ['connect', 'watch']);
  
 };
 ```
+
+これでgrunt-contrib-connectというプラグインによって簡易サーバーが起動し、  
+watchで設定しているファイルの監視を行うようになりました。  
+ブラウザから``localhost:9000``にアクセスしてみてください。
