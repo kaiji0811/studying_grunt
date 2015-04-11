@@ -77,4 +77,7 @@ $ nvm use v0.11.12
 Now using node v0.11.12
 ```  
 
-これでNode.jsのインストールは完了しました。
+これでNode.jsのインストールは完了しました。  
+次は、Gruntを導入してみましょう。  
+
+[Gruntを使ってみよう！](https://github.com/kaiji0811/studying_grunt/wiki/Grunt%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81)
