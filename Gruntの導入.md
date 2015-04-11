@@ -122,6 +122,7 @@ module.exports = function(grunt){
 watchで設定しているファイルの監視(ここではhtmlファイルの監視)を行うようになりました。  
 ブラウザから``localhost:9000``にアクセスしてみてください。  
 
-次は、ファイルに変更があった際に自動でブラウザを更新する機能  
+次は、ファイルに変更があった際に自動でブラウザを更新する機能、  
 **live reload**について説明します。  
 
+[Live Reloadを使ってみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
