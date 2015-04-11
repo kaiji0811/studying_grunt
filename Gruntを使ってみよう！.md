@@ -101,9 +101,6 @@ module.exports = function(grunt){
       }
     },
     watch: {
-      options: {
-          livereload: true
-      },
       html: {
           files: ['*.html'],
           tasks: ['']
@@ -122,5 +119,5 @@ module.exports = function(grunt){
 ```
 
 これでgrunt-contrib-connectというプラグインによって簡易サーバーが起動し、  
-watchで設定しているファイルの監視を行うようになりました。  
+watchで設定しているファイルの監視(ここではhtmlファイルの監視)を行うようになりました。  
 ブラウザから``localhost:9000``にアクセスしてみてください。
