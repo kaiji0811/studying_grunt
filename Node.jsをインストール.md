@@ -84,4 +84,4 @@ $ nvm alias default v0.11.12
 
 次は、Gruntを導入してみましょう。  
 
-[Gruntを使ってみよう！](https://github.com/kaiji0811/studying_grunt/wiki/Grunt%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81)
+[Gruntの導入](https://github.com/kaiji0811/studying_grunt/wiki/Grunt%E3%81%AE%E5%B0%8E%E5%85%A5)
