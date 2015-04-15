@@ -60,4 +60,4 @@ module.exports = function(grunt){
 
 次は指定したcssを圧縮する、grunt-contrib-cssminの使用方法です。  
 
-[cssを圧縮してみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
+[cssを圧縮してみる](https://github.com/kaiji0811/studying_grunt/wiki/css%E3%82%92%E5%9C%A7%E7%B8%AE%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)
