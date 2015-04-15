@@ -1,25 +1,22 @@
-##Live Reloadを使ってみる  
+##cssを圧縮してみる  
 
-watchで監視しているファイルに変更があった時に、自動的にブラウザを更新するとても便利な機能、  
-Live Reloadを使ってみましょう。  
-※google chromeを使用し説明します。
+cssを圧縮することができる、grunt-contrib-cssminを使ってみましょう。
 
 手順
-  1. ブラウザにアドオンをインストール
-  1. watchのオプションでlivereloadをtrueにする
+  1. grunt-contrib-cssminをインストール
+  1. 圧縮するcssファイルと圧縮後のファイルを指定
 
-###1.ブラウザにアドオンをインストール
-Live Reloadを使用するためには、ブラウザ側にアドオンを導入する必要があります。  
+###1.grunt-contrib-cssminをインストール
 
-[Live Reload - Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)  
+まずnpmでgrunt-contrib-cssminをインストールしてみましょう。  
 
-これでブラウザ側の設定は終わりました。簡単ですね。  
+```
+$ npm install grunt-contrib-cssmin --save-dev
+```
 
-###2.watchのオプションでlivereloadをtrueにする  
+これでcssminの導入は完了です。おなじみの手順ですね。  
 
-監視ファイルに変更があった際にブラウザを更新するので、  
-Gruntfile.jsで設定したwatchのオプションでlivereloadをtrueにしてあげましょう。  
-コードを見てみます。
+###2.圧縮するcssファイルと圧縮後のファイルを指定
 
 ```
 module.exports = function(grunt){
@@ -27,6 +24,12 @@ module.exports = function(grunt){
   pkg: grunt.file.readJSON('package.json'),  //package.jsonを取得
  
   grunt.initConfig({      //grunt.initConfigの中にタスクの設定を記述する
+    cssmin: {
+      hoge: { //hogeの名前は任意です
+        src: ['css/sample01.css', 'css/sample02.css'], //配列で圧縮したいファイルを指定
+        dest: 'css/sample.min.css'  //圧縮したファイルをcssフォルダの中にsample.min.cssという名前で生成
+      }
+    },
     connect: {
       server: {
           options: {
@@ -36,10 +39,10 @@ module.exports = function(grunt){
       }
     },
     watch: {
+      options: {
+          livereload: true
+      },
       html: {
-          options: {
-              livereload: true // live reloadの機能をオンにする。
-          },
           files: ['*.html'],
           tasks: ['']
       }
@@ -49,15 +52,21 @@ module.exports = function(grunt){
   // loadNpmTasksを使用して、プラグインを読み込む
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
  
   //defaultと設定することで、登録しているタスクを実行する。
   grunt.registerTask('default', ['connect', 'watch']);
  
 };
-```  
-これでLive Reloadが利用可能になりました。  
-後はブラウザ側のアドオンのアイコンをぽちっと押してあげるだけです。  
+```
 
-次は指定したcssを圧縮する、grunt-contrib-cssminの使用方法です。  
+あとはコマンドラインから``grunt cssmin``を実行してあげるだけです。  
+圧縮するファイルの指定方法は上記で説明した方法以外にもあります。  
+詳しい使い方は是非調べてみてください。  
 
-[cssを圧縮してみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
+以上です。  
+
+
+次はjavascriptを結合する、grunt-contrib-concatの使用方法です。  
+
+[javascriptを結合してみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
