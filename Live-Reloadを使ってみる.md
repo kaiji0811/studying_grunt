@@ -18,7 +18,7 @@ Live Reloadを使用するためには、ブラウザ側にアドオンを導入
 ###2.watchのオプションでlivereloadをtrueにする  
 
 監視ファイルに変更があった際にブラウザを更新するので、  
-Gruntfile.jsで設定したwatchのオプションでliverelaodをtrueにしてあげましょう。  
+Gruntfile.jsで設定したwatchのオプションでlivereloadをtrueにしてあげましょう。  
 コードを見てみます。
 
 ```
@@ -58,4 +58,6 @@ module.exports = function(grunt){
 これでLive Reloadが利用可能になりました。  
 後はブラウザ側のアドオンのアイコンをぽちっと押してあげるだけです。  
 
-[Live Reloadを使ってみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
+次は指定したcssを圧縮する、grunt-contrib-cssminの使用方法です。  
+
+[cssを圧縮してみる](https://github.com/kaiji0811/studying_grunt/wiki/Live-Reload%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B)
